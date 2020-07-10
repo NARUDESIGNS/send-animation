@@ -3,10 +3,208 @@
     margin: 0;
     box-sizing: border-box;
 }
+body {
+    background-color: rgb(236, 236, 236);
+}
+
+/* ---------------------- ANIMATIONS STARTS HERE ------------------- */
+.slide-down {
+    animation: slide-down 1s ease;
+    -webkit-animation: slide-down 1s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide-down {
+    from {
+        opacity: 1;
+    }
+    to {
+        margin-top: 50px;
+        opacity: 0;
+    }
+}
+
+
+.slide-up {
+    animation: slide-up 1s ease;
+    -webkit-animation: slide-up 1s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide-up {
+    from {
+        margin-top: 50px;
+        opacity: 0;
+    }
+    to {
+        margin-top: 17px;
+        opacity: 1;
+    }
+}
+
+.slide-right1 {
+    animation: slide-right1 1s linear;
+    -webkit-animation: slide-right1 1s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 0.7s
+}
+
+@keyframes slide-right1 {
+    from {
+        visibility: visible;
+        left: 5px;
+    }
+    to {
+        left: 80px;
+        visibility: visible;
+    }
+}
+
+.slide-left1 {
+    animation: slide-left1 1s linear;
+    -webkit-animation: slide-left1 1s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide-left1 {
+    from { left: 80px; visibility: visible}
+    to {left: 0; visibility: hidden}
+}
+ 
+
+.slide-left {
+    animation: slide-left 1s linear;
+    -webkit-animation: slide-left 1s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+}
+
+@keyframes slide-left {
+    from {
+        visibility: visible;
+        right: 5px;
+    }
+    to {
+        right: 80px;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.slide-right {
+    animation: slide-right 1s linear;
+    -webkit-animation: slide-right 1s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide-right {
+    from { right: 80px; visibility: visible;}
+    to {right: 0; visibility: hidden;}
+}
+ 
+
+
+/* ---------------------- ANIMATIONS ENDS HERE ------------------- */
+
+
 
 .container {
-    margin: 50px auto;
-    width: 50%;
-    height: 50%;
-    background-color: gray;
+    margin: 100px auto;
+    width: 80%;
+    height: 400px;
+    max-width: 500px;
+    background-color: white;
+    padding-top: 10px;
+}
+
+
+.send {
+    width: 200px;
+    height: 50px;
+    margin: 150px auto;
+    padding: 1px;
+    background-color: rgb(80, 80, 133);
+    background-color: rgb(85, 146, 141);
+    border: none;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    color: white;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(59, 93, 99, 0.3);
+}
+.send:active {
+    box-shadow: 0 5px 5px rgba(59, 93, 99, 0.3);
+}
+.send p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-top: 17px;
+}
+
+.human-wrapper {
+    width: 23px;
+    height: 25px;
+    /* border: 1px solid lime; */
+    bottom: 40px;
+    z-index: 5;
+    position: absolute;
+    visibility: hidden;
+}
+.head {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: absolute;
+}
+.body {
+    width: 3px;
+    height: 13px;
+    background-color: white;
+    position: absolute;
+    left: 3px;
+    top: 11px;
+}
+.hand {
+    width: 10px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: 3px;
+    top: 12px;
+    z-index: 1;
+}
+.package {
+    width: 10px;
+    height: 10px;
+    background-color: burlywood;
+    position: absolute;
+    left: 11px;
+    top: 5px;
+}
+
+.send > div:nth-of-type(1) {
+    bottom: 10px;
+    left: 5px;
+}
+.send > div:nth-of-type(2) {
+    bottom: 10px;
+    right: 5px;
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+}
+#character2 .package {
+    visibility: hidden;
 }
