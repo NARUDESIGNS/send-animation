@@ -116,12 +116,22 @@ body {
     background-color: white;
     padding-top: 10px;
 }
-
+.container > p {
+    text-align: center;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+    margin-top: 50px;
+}
+.container > p:nth-of-type(1) {
+    color: rgb(85, 146, 141);
+    font-size: 12px;
+}
 
 .send {
     width: 200px;
     height: 50px;
-    margin: 150px auto;
+    margin: 100px auto;
     padding: 1px;
     background-color: rgb(80, 80, 133);
     background-color: rgb(85, 146, 141);
